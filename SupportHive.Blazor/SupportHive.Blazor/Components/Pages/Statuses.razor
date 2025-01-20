@@ -1,4 +1,4 @@
-﻿@page "/weather"
+﻿@page "/Statuses"
 @inject HttpClient Http
 @code
 {
@@ -13,12 +13,10 @@
 
 @attribute [StreamRendering]
 
-<PageTitle>Weather</PageTitle>
+<PageTitle>Status</PageTitle>
 
-<h1>Weather</h1>
-
-<p>This component demonstrates showing data.</p>
-
+<h1>SupportHive</h1>
+<p>Ticket status test page</p>
 @if (_statuses == null)
 {
     <div>Loading...</div>
