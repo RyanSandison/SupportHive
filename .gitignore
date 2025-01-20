@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/SupportHive.API/appsettings.json
+/SupportHive.Blazor/SupportHive.Blazor/appsettings.json
