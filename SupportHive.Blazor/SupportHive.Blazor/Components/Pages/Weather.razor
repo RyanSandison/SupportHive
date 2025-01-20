@@ -1,0 +1,38 @@
+﻿@page "/weather"
+@inject HttpClient Http
+@code
+{
+    private List<Status> _statuses;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _statuses = await Http.GetFromJsonAsync<List<Status>>("https://localhost:7110/SupportHive");
+    }
+    
+}
+
+@attribute [StreamRendering]
+
+<PageTitle>Weather</PageTitle>
+
+<h1>Weather</h1>
+
+<p>This component demonstrates showing data.</p>
+
+@if (_statuses == null)
+{
+    <div>Loading...</div>
+}
+else{
+    <div>
+        @foreach (var status in _statuses)
+        {
+            <ul>
+                <li>@status.StatusName</li>
+            </ul>
+        }
+    </div>
+}
+
+
+
