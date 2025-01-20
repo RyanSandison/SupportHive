@@ -16,11 +16,17 @@ namespace SupportHive.API.Controllers {
 			_db = db;
 		}
 
-		[HttpGet(Name = "GetStatus")]
-		public async Task<ActionResult<User>> GetUser()
+		[HttpGet("GetStatus")]
+		public async Task<ActionResult<User>> GetStatus()
 		{
 			List<Status> status = (List<Status>)await _db.LoadData<Status, dynamic>("dbo.GetStatus", new { });
 			return Ok(status);
 		}
-	}
+
+        [HttpGet("GetPriority")]
+        public async Task<ActionResult<User>> GetPriority()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

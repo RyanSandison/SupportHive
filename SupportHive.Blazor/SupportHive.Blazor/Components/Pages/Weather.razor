@@ -6,7 +6,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _statuses = await Http.GetFromJsonAsync<List<Status>>("https://localhost:7110/SupportHive");
+        _statuses = await Http.GetFromJsonAsync<List<Status>>("https://localhost:7110/SupportHive/GetStatus");
     }
     
 }
