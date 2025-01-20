@@ -28,5 +28,11 @@ namespace SupportHive.API.Controllers {
         {
             throw new NotImplementedException();
         }
+
+        [HttpGet("GetCategory")]
+        public async Task<ActionResult<User>> GetCategory()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
